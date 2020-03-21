@@ -9,7 +9,7 @@ export default function useDarkMode({ initialValue }) {
       : document.body.classList.remove('dark-mode');
   }, [isOnDarkMode]);
 
-  const turnDarkModeOn = () => setIsOnDarkMode(!isOnDarkMode);
+  const switchDarkMode = () => setIsOnDarkMode(!isOnDarkMode);
 
-  return [isOnDarkMode, turnDarkModeOn];
+  return [isOnDarkMode, switchDarkMode];
 }

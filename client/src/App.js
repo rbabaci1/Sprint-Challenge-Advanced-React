@@ -16,6 +16,11 @@ export default class App extends Component {
   render() {
     return (
       <div className='App'>
+        <h1>
+          The Women's World Cup players ranked by search interest{' '}
+          <span>June-July 2019</span>
+        </h1>
+
         <UserList userList={this.state.data} />
       </div>
     );
