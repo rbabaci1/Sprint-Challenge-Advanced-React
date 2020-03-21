@@ -3,8 +3,10 @@ import UserCard from './UserCard';
 
 export default function UserList({ userList }) {
   return (
-    <div>
-      <h1>User list</h1>
+    <div className='list-wrapper'>
+      {userList.map((user, index) => (
+        <UserCard user={user} key={index} />
+      ))}
     </div>
   );
 }
