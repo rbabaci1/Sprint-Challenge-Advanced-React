@@ -5,11 +5,11 @@ export default class App extends Component {
     data: []
   };
 
-  async componentDidMount() {
-    const response = await fetch('http://localhost:5000/api/players');
-    const dataList = await response.json();
-
-    this.setState({ data: dataList });
+  componentDidMount() {
+    fetch('http://localhost:5000/api/players')
+      .then(response => response.json())
+      .then(dataList => this.setState({ data: dataList }))
+      .catch(err => console.error(err));
   }
 
   render() {
