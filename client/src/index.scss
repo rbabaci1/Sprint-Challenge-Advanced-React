@@ -26,6 +26,10 @@ code {
   display: block;
 }
 
+.userList-container {
+  background-color: white;
+}
+
 .list-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -89,7 +93,9 @@ code {
 }
 
 .dark-mode {
-  background-color: rgb(9, 10, 10);
+  .userList-container {
+    background-color: black;
+  }
 
   #dark-mode-text {
     color: #f7f7f7;
