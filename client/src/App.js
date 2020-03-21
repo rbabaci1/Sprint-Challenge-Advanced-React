@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import UserList from './components/UserList';
+
 export default class App extends Component {
   state = {
     data: []
@@ -13,6 +15,10 @@ export default class App extends Component {
   }
 
   render() {
-    return <div className='App'></div>;
+    return (
+      <div className='App'>
+        <UserList userList={this.state.data} />
+      </div>
+    );
   }
 }
