@@ -91,6 +91,10 @@ code {
 .dark-mode {
   background-color: rgb(9, 10, 10);
 
+  #dark-mode-text {
+    color: #f7f7f7;
+  }
+
   h1 {
     background: rgb(228, 188, 13);
   }
@@ -102,7 +106,7 @@ code {
       color: #b8b9b9;
 
       span {
-        color: rgb(158, 148, 90);
+        color: rgb(175, 163, 94);
       }
     }
   }

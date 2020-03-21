@@ -7,7 +7,7 @@ export default function UserList({ userList }) {
   const [isOnDarkMode, switchDarkMode] = useDarkMode(false);
 
   return (
-    <div className='userList-container'>
+    <div className='userList-container' data-testid='userList'>
       <div className='dark-mode__toggle' onClick={switchDarkMode}>
         <div className={isOnDarkMode ? 'toggle toggled' : 'toggle'} />
       </div>
