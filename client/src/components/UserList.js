@@ -8,7 +8,11 @@ export default function UserList({ userList }) {
 
   return (
     <div className='userList-container' data-testid='userList'>
-      <div className='dark-mode__toggle' onClick={switchDarkMode}>
+      <div
+        className='dark-mode__toggle'
+        onClick={switchDarkMode}
+        data-testid='dark-mode-btn'
+      >
         <div className={isOnDarkMode ? 'toggle toggled' : 'toggle'} />
       </div>
 
