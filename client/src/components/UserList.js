@@ -1,7 +1,7 @@
 import React from 'react';
 
 import UserCard from './UserCard';
-import useDarkMode from '../hooks/useDarkMode';
+import { useDarkMode } from '../hooks/useDarkMode';
 
 export default function UserList({ userList }) {
   const [isOnDarkMode, switchDarkMode] = useDarkMode(false);
@@ -16,7 +16,7 @@ export default function UserList({ userList }) {
         <div className={isOnDarkMode ? 'toggle toggled' : 'toggle'} />
       </div>
 
-      <span id='dark-mode-text'>dark mode</span>
+      <span id='dark-mode-text'>dark mode {isOnDarkMode ? 'On' : 'Off'}</span>
 
       <div className='list-wrapper'>
         {userList.map((user, index) => (
