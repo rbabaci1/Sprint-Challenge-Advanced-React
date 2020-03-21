@@ -7,10 +7,18 @@ export default function UserList({ userList }) {
   const [isOnDarkMode, switchDarkMode] = useDarkMode(false);
 
   return (
-    <div className='list-wrapper'>
-      {userList.map((user, index) => (
-        <UserCard user={user} key={index} />
-      ))}
+    <div className='userList-container'>
+      <div className='dark-mode__toggle' onClick={switchDarkMode}>
+        <div className={isOnDarkMode ? 'toggle toggled' : 'toggle'} />
+      </div>
+
+      <span id='dark-mode-text'>dark mode</span>
+
+      <div className='list-wrapper'>
+        {userList.map((user, index) => (
+          <UserCard user={user} key={index} />
+        ))}
+      </div>
     </div>
   );
 }
