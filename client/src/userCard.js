@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function userCard({ user }) {
+export default function UserCard({ user }) {
   return (
     <div className='card'>
       <h2>
