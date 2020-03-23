@@ -12,20 +12,20 @@ it('renders a dark mode button', () => {
   expect(getByTestId('dark-mode-btn')).toBeInTheDocument();
 });
 
-// it('renders with light mode default', () => {
-//   const { getByTestId } = render(<App />);
+it('renders with light mode default', () => {
+  const { getByTestId } = render(<App />);
 
-//   expect(getByTestId('dark-mode-btn')).toBeInTheDocument();
-//   expect(getByTestId('userList')).toHaveStyle('background-color: white');
-// });
+  expect(getByTestId('dark-mode-btn')).toBeInTheDocument();
+  expect(getByTestId('userList')).toHaveStyle('background-color: white');
+});
 
-// it('toggles the dark mode', () => {
-//   const { getByTestId } = render(<UserList userList={mockData} />);
-//   const toggleButton = getByTestId('dark-mode-btn');
+it('toggles the dark mode', () => {
+  const { getByTestId } = render(<UserList userList={mockData} />);
+  const toggleButton = getByTestId('dark-mode-btn');
 
-//   fireEvent.click(toggleButton);
-//   expect(getByTestId('userList')).toHaveStyle('background-color: black');
+  fireEvent.click(toggleButton);
+  expect(getByTestId('userList')).toHaveStyle('background-color: black');
 
-//   fireEvent.click(toggleButton);
-//   expect(getByTestId('userList')).toHaveStyle('background-color: white');
-// });
+  fireEvent.click(toggleButton);
+  expect(getByTestId('userList')).toHaveStyle('background-color: white');
+});
